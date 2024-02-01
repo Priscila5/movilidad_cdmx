@@ -31,4 +31,8 @@ view: cablebus {
   measure: count {
     type: count
   }
+  measure: total_afluencia {
+    sql: ${afluencia} ;;
+    type: sum
+  }
 }

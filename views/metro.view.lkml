@@ -33,6 +33,11 @@ view: metro {
     sql: ${TABLE}.tipo_pago ;;
   }
   measure: count {
+
     type: count
+  }
+  measure: total_afluencia {
+    sql: ${afluencia} ;;
+    type: sum
   }
 }
