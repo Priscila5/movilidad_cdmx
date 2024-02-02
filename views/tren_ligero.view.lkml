@@ -27,4 +27,14 @@ view: tren_ligero {
   measure: count {
     type: count
   }
+
+  measure: total_afluencia {
+    sql: ${afluencia} ;;
+    type: sum
+  }
+
+  measure: promedio_afluencia {
+    sql: ${afluencia} ;;
+    type: average
+  }
 }

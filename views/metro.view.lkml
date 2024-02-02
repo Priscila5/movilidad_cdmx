@@ -40,4 +40,9 @@ view: metro {
     sql: ${afluencia} ;;
     type: sum
   }
+
+  measure: promedio_afluencia {
+    sql: ${afluencia} ;;
+    type: average
+  }
 }
