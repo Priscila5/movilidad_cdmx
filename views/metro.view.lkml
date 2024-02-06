@@ -13,6 +13,7 @@ view: metro {
     type: string
     sql: ${TABLE}.estacion ;;
   }
+
   dimension_group: fecha {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
@@ -36,12 +37,12 @@ view: metro {
 
     type: count
   }
-  measure: total_afluencia {
+  measure: total_afluencia_metro {
     sql: ${afluencia} ;;
     type: sum
   }
 
-  measure: promedio_afluencia {
+  measure: promedio_afluencia_metro {
     sql: ${afluencia} ;;
     type: average
   }

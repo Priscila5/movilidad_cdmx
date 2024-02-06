@@ -8,13 +8,16 @@ view: cablebus {
   dimension: anio {
     type: number
     sql: ${TABLE}.anio ;;
+
   }
+
   dimension_group: fecha {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
     convert_tz: no
     datatype: date
     sql: ${TABLE}.fecha ;;
+
   }
   dimension: linea {
     type: string
@@ -31,12 +34,12 @@ view: cablebus {
   measure: count {
     type: count
   }
-  measure: total_afluencia {
+  measure: total_afluencia_cablebus {
     sql: ${afluencia} ;;
     type: sum
   }
 
-  measure: promedio_afluencia {
+  measure: promedio_afluencia_cablebus {
     sql: ${afluencia} ;;
     type: average
   }

@@ -9,6 +9,7 @@ view: trolebus {
     type: number
     sql: ${TABLE}.anio ;;
   }
+
   dimension_group: fecha {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
@@ -32,12 +33,12 @@ view: trolebus {
     type: count
   }
 
-  measure: total_afluencia {
+  measure: total_afluencia_trolebus {
     sql: ${afluencia} ;;
     type: sum
   }
 
-  measure: promedio_afluencia {
+  measure: promedio_afluencia_trolebus {
     sql: ${afluencia} ;;
     type: average
   }

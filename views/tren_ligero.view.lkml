@@ -9,6 +9,7 @@ view: tren_ligero {
     type: number
     sql: ${TABLE}.anio ;;
   }
+
   dimension_group: fecha {
     type: time
     timeframes: [raw, date, week, month, quarter, year]
@@ -28,12 +29,12 @@ view: tren_ligero {
     type: count
   }
 
-  measure: total_afluencia {
+  measure: total_afluencia_tren_ligero {
     sql: ${afluencia} ;;
     type: sum
   }
 
-  measure: promedio_afluencia {
+  measure: promedio_afluencia_tren_ligero {
     sql: ${afluencia} ;;
     type: average
   }
